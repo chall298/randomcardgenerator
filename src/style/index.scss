@@ -1,0 +1,53 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  background: green;
+  box-sizing: border-box;
+}
+
+.card {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  height: 400px;
+  font-size: 80px;
+  width: 250px;
+  padding: 20px;
+  padding-top: 105px;
+  border-radius: 20px;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    font-size: 80px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.clubs:before,
+  &.clubs:after {
+    content: "\2663";
+  }
+  &.hearts:before,
+  &.hearts:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+}
+
+// youcanwriteyourownstyleshere......oryoucanusetheimportcommandtoincludeothersylesheetsintoyourbundeaswell,e.j: ;
+
+// import 'relative/path/to/stylesheet.scss';
